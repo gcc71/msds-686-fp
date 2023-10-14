@@ -1,0 +1,20 @@
+# name: nlp-de-latest #I wasn't sure if this was on purpose or if the name changed?
+name: nlp_latest #I added this
+channels:
+    - conda-forge
+dependencies:
+    - python=>3.8
+    - pip #You need to add pip before-hand, conda will install it for you but it maybe the wrong version.
+    - ipykernel #Apparently conda-forge has issues with jupyter-lab, so this is basically a widget to connect your env. Had to install nb_conda_kernel.
+    - scipy
+    - kaggle
+    - spacy
+    - pip: #I moved the other pip packages here for consistency.
+        spacy: latest
+        numpy: latest
+        pandas: latest
+        scikit-learn: latest
+        matplotlib: latest
+        jupyterlab: latest #I couldn't find much on this but, this will install it inside your env.     
+        
+    
